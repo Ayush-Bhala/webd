@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MYONLINESPECS</title>
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+		scroll-behavior: smooth;
+	}
+		.navbar{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            position: relative;
+            top: 0px;
+		}
+		.navbar::before{
+			content: "";
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index: -1;
+			opacity: 0.5;
+			position: absolute;
+		}
+		#logo{
+			margin: 3px 9px;
+		}
+		#logo img{
+			width: 90px;
+		}
+		.navbar ul{
+			display: flex;
+			list-style: none;
+			margin: 20px 10px;
+		}
+		.navbar li a{
+            font-family: cursive;
+            font-size: 18px;
+            text-decoration: none;
+            color: floralwhite;
+            display: block;
+            padding: 5px 15px;
+            border-radius: 20px;
+		}
+		.navbar ul li a:hover{
+            color: black;
+            background-color: whitesmoke;
+            cursor: pointer;
+            border: 2px solid black;
+		}
+		#HOME{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: centers;
+			height: 466px;
+			padding: 10px 200px;
+			margin: 50px;
+		}
+		/*#HOME{
+			scroll-behavior: auto;
+		}*/
+		#HOME::before{
+			content: "";
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background-image: url("https://media.istockphoto.com/photos/looking-through-eyeglasses-to-city-sunset-view-focused-on-lens-with-picture-id1144469499?k=20&m=1144469499&s=612x612&w=0&h=axIJcTCaF-qWI0bdRVEcbvM23DHiCMvg4X3AU7-UGNg=");
+		    background-repeat:no-repeat ;
+		    background-size: cover;
+		    position: absolute;
+			z-index: -1;
+			opacity: 0.9;
+			position: absolute;
+		}
+		#HOME h2{
+			font-size: 45px;
+			font-family: sans-serif;
+			text-align: center;
+			color: white;
+			font-weight: bolder;			
+		}
+		#HOME p{
+			font-size: 18px;
+			font-family: sans-serif;
+			text-align: center;
+			color: white;
+			font-weight: bold;
+			margin: 5px;
+		}
+		.btn{
+			border: 2px solid white;
+			background-color: red;
+			color: whitesmoke;
+			margin: 5px 5px;
+			padding: 10px 10px;
+			border-radius: 15px;
+			cursor: pointer;
+		}
+		.btn:hover{
+			background-color:orangered;
+			color: black;
+		}
+		.container{
+			background-color: #8f4646;
+		}
+		.container h2{
+			font-size: 24px;
+			font-family: cursive;
+			color: white;
+			text-align: center;
+		}
+		#services-container{
+			display: flex;
+            background-color:oldlace;
+		}
+		#SERVICES .box{
+           border: 2px solid #f5d5d5;
+           border-radius: 15px;
+           margin: 30px 12px;
+           padding: 5px 5px;
+           background-color: #f1ceec;
+           width: 33% auto;
+           margin-bottom: 20px;
+           
+          }
+		#SERVICES .box img{
+			height: 110px;
+			width: 200px;
+			align-content:center;
+			display: block;
+			margin: auto;
+		    padding: 12px;			
+		}
+		#SERVICES .box h2{
+			text-align: center;
+			font-family: serif;
+			font-size: 24px;
+			padding: 7px;
+		}
+		#SERVICES .box p{
+			text-align: center;
+			font-family: serif;
+			justify-content: center;
+			font-size: 18px;
+
+		}
+		#client-section{
+			position: relative;
+		}
+		#client-section h2{
+			font-size:24px ;
+			font-family: serif;
+			padding: 7px;
+			color: black;
+			text-align: center;
+			margin: 10px;
+			background-color:#bac6cd;
+		}
+		#client-section::before{
+    		content: "";
+    		position: absolute;
+    		height: 100%;
+    		width: 100%;
+    		background-image: url("https://cdn.pixabay.com/photo/2016/02/08/14/25/banner-1186633__340.jpg");
+    		background-size: cover;
+    		background-repeat: no-repeat;
+    		z-index: -1;
+    		opacity: 0.6;
+    	}
+    	#client{
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+    	}
+      #client .client-item{
+    		padding: 34px;
+    	}
+    	#client .client-item img{
+    		height: 190px;
+    	}
+    	#contact{
+    		position:relative ;
+
+    	}
+    	#contact h2{
+    		text-align: center;
+    		font-size: 38px;
+    		font-family: monospace;
+    		background-color: ;
+    		margin: 3px;
+    		padding: 15px;
+    	}
+    	#contact::before{
+    		content: "";
+    		position: absolute;
+    		height: 100%;
+    		width: 100%;
+    		background-image: url("https://cdn.pixabay.com/photo/2015/01/25/21/02/phone-612061__340.jpg");
+    		z-index: -1;
+    		opacity: 0.4;
+    	}
+    	#contact-box{
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		padding: 34px;
+    	}
+    	#contact-box input,textarea{
+    		padding: 5px;
+    		border-radius: 10px;
+    		font-size: 14px;
+    		width: 100%;
+    	}
+    	#contact-box form{
+            width: 45%;
+    	}
+    	#contact-box label{
+    		font-size: 14px;
+    		font-family: italic;
+
+    	}
+    	#contact-box .btn{
+    		width: 60%;
+    		margin: 20px 105px;
+    	}
+    	 footer{
+           background: black;
+           color: white;
+           padding: 9px 20px;
+           text-align: center;
+         }
+	</style>
+</head>
+<body>
+    <nav class="navbar">
+    	<div id="logo">
+    		<img src="https://cdn.pixabay.com/photo/2014/04/03/11/08/spectacles-311831__340.png">
+    	</div>
+    	<ul>
+    		<li><a href="#HOME">HOME</a></li>
+    		<li><a href="#SERVICES">SERVICES</a></li>
+    		<li><a href="#client-section">CLIENTS</a></li>
+    		<li><a href="#contact-box">CONTACT</a></li>
+    	</ul>
+    </nav>
+    <section id="HOME">
+    	<h2>WELCOME TO MY ONLINE SPECS</h2>
+    	<p>Glasses, also known as eyeglasses or spectacles, are vision eyewear, consisting of glass or hard plastic lenses mounted in a frame that holds them in front of a person's eyes, typically utilizing a bridge over the nose and hinged arms (known as temples or temple pieces) which rest over the ears</p>
+    	<button class="btn">ORDER NOW</button>
+    </section>
+    <div class="container">
+    	<h2>OUR SERVICES</h2>
+    </div>
+    <section id="services-container">
+    	<div id="SERVICES">
+    		<div class="box">
+    			<img src="https://cdn.pixabay.com/photo/2017/05/13/01/48/e-commerce-2308541__340.png">
+    			<h2>ORDER ONLINE</h2>
+    			<p>Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app. Consumers find a product of interest by visiting the website of the retailer directly or by searching among alternative vendors using a shopping search engine, </p>
+    		</div>
+    		</div>
+    		<div id="SERVICES">
+    			<div class="box">
+    			<img src="https://cdn.pixabay.com/photo/2021/03/19/13/40/online-6107598__340.png">
+    			<h2>ONLINE PAYMENT</h2>
+    			<p>Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app. Consumers find a product of interest by visiting the website of the retailer directly or by searching among alternative vendors using a shopping search engine, </p>
+    		</div>
+    	    </div>
+    		<div id="SERVICES">
+    			<div class="box">
+    			<img src="https://cdn.pixabay.com/photo/2017/08/27/21/20/box-2687558__340.png">
+    			<h2>DELIVERY</h2>
+    			<p>Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app. Consumers find a product of interest by visiting the website of the retailer directly or by searching among alternative vendors using a shopping search engine, </p>
+    		</div>
+    	</div>
+    </section>
+    <section id="client-section">
+    	<h2>OUR CLIENTS</h2>
+    	<div id="client">
+    		<div class="client-item">
+    			<img src="https://cdn.pixabay.com/photo/2018/05/08/21/28/apple-3384010__340.png">
+    		</div>
+    		<div class="client-item">
+    			<img src="https://cdn.pixabay.com/photo/2014/04/03/10/23/windows-310290__340.png">
+    		</div>
+    		<div class="client-item">
+    			<img src="https://cdn.pixabay.com/photo/2018/05/08/21/29/skype-3384016__340.png">
+    		</div>
+    		<div class="client-item">
+    			<img src="https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908__340.png">
+    		</div>
+    		<div class="client-item">
+    			<img src="https://cdn.pixabay.com/photo/2015/05/17/10/51/facebook-770688__340.png">
+    		</div>
+    	</div>
+
+     </section>
+     <section id="contact">
+     	<h2>CONTACT DETAILS</h2>
+     	<div id="contact-box">
+     		<form action="">
+     			<div class="form-group">
+     				<label for="name">NAME</label>
+     				<input type="text" name="name" id="name" placeholder="ENTER NAME">
+     			</div>
+     			<div class="form-group">
+     				<label for="email">EMAIL US</label>
+     				<input type="text" name="name" id="email" placeholder="ENTER EMAIL ADDRESS">
+     			</div>
+     			<div class="form-group">
+     				<label for="name">PHONE NUMBER</label>
+     				<input type="text" name="name" id="phone number" placeholder="ENTER YOUR PHONE NUMBER">
+     			</div>
+     			<div class="form-group">
+    				<label for="name">MESSAGE: </label>
+    				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+    			</div>
+    			<button class="btn">SUBMIT</button>
+     		</form>
+     	</div>
+     </section>
+     <footer>
+     	<div >
+            Copyright &copy; www.myOnlineMeal.com. All rights reserved!
+        </div>
+     </footer>
+</body>
+</html>
